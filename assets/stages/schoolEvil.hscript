@@ -1,0 +1,25 @@
+importClass("flixel.addons.effects.FlxTrail");
+
+function createStage() {
+    Parent.pixel = true;
+
+    var bg:FlxSprite = new FlxSprite(400, 200);
+    bg.frames = Paths.getSparrowAtlas('weeb/animatedEvilSchool');
+    bg.animation.addByPrefix('idle', 'background 2', 24);
+    bg.animation.play('idle');
+    bg.scrollFactor.set(0.8, 0.9);
+    bg.scale.set(6, 6);
+    Parent.add(bg);
+}
+
+function createPost() {
+    Parent.dad.x -= 150;
+    Parent.dad.y += 100;
+    Parent.boyfriend.x += 200;
+    Parent.boyfriend.y += 220;
+    Parent.gf.x += 180;
+    Parent.gf.y += 300;
+
+    var evilTrail = new FlxTrail(Parent.dad, null, 4, 24, 0.3, 0.069);
+    Parent.insert(Parent.members.indexOf(Parent.dad), evilTrail);
+}

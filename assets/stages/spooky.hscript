@@ -1,0 +1,37 @@
+var halloweenBG;
+
+function createStage() {
+    var alias = !Save.get("antialiasing");
+
+    halloweenBG = new FlxSprite(-200, -100);
+    halloweenBG.frames = Paths.getSparrowAtlas('halloween_bg');
+    halloweenBG.animation.addByPrefix('idle', 'halloweem bg0');
+    halloweenBG.animation.addByPrefix('lightning', 'halloweem bg lightning strike', 24, false);
+    halloweenBG.animation.play('idle');
+    halloweenBG.antialiasing = !alias;
+    Parent.add(halloweenBG);
+}
+
+function createPost() {
+    Parent.dad.y += 200;
+}
+
+var lightningStrikeBeat = 0;
+var lightningOffset = 8;
+
+function lightningStrikeShit() {
+    FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
+    halloweenBG.animation.play('lightning');
+
+    lightningStrikeBeat = curBeat;
+    lightningOffset = Random.int(8, 24);
+
+    Parent.boyfriend.playAnim('scared', true);
+    Parent.gf.playAnim('scared', true);
+}
+
+function beatHitPost(beat) {
+    if (Random.bool(10) && beat > lightningStrikeBeat + lightningOffset) {
+        lightningStrikeShit();
+    }
+}

@@ -1,0 +1,11 @@
+var done = false;
+
+function startCountdown() {
+    Game.allowCountdown = done;
+    if (!done) {
+        Game.openDialog();
+    }
+}
+function dialogFinished() {
+    done = true;
+}

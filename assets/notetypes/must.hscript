@@ -1,0 +1,4 @@
+function onMiss(note) {
+    if (note.noteType == "must")
+        Game.health -= 0.5;
+}

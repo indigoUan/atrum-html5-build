@@ -1,0 +1,64 @@
+{
+    "name": "Italiano",
+    "region": "EU",
+    "keyboardScheme": "QWERTY",
+    "latin": true,
+    "locale": {
+        "title": {
+            "intro": [ "presentano", "in associazione", "con" ],
+            "enter": "Premi Invio per Iniziare"
+        },
+        "difficulties": ["facile", "normale", "difficile"],
+        "story": {
+            "wScore": "PUNTEGGIO NETTO",
+            "tracks": "TRACCE"
+        },
+        "freeplay": {
+            "pBest": "HIGHSCORE",
+            "accuracy": "PRECISIONE",
+            "rating": "VOTO",
+
+            "extraData": "per dati extra",
+            "songPreview": "per ascoltare la traccia strumentale",
+            "mods": "per cambiare i modificatori"
+        },
+        "credits": [
+            "",
+            "Programmatore principale.",
+            "Supporto MP4.",
+            "Artista principale.",
+            "Disegnato la sua icona e quella di indigo.",
+            "",
+            "Programmatore principale.",
+            "Animatore principale.",
+            "Artista principale.",
+            "Compositore principale."
+        ],
+        "options": {
+            "ahah": "sì, come no"
+        },
+
+        "gameplay": {
+            "ratings": [
+                ["Magnifico", "Magnifico"],
+                ["Figo", "Figo"],
+                ["Buono", "Buono"],
+                ["Male", "Male"],
+                ["Merda", "Buu"],
+                ["Mancati", "Mancati"]
+            ],
+            "accuracy": "Precisione",
+            "score": "Punti",
+            "rating": "Voto",
+
+            "unrated": "non valutato"
+        },
+        "pause": {
+            "resume": "riprendi",
+            "restart_song": "riavvia",
+            "botplay": "botplay",
+            "options": "opzioni",
+            "exit_to_menu": "ritorna al menu"
+        }
+    }
+}

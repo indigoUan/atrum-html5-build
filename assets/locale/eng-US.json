@@ -1,0 +1,64 @@
+{
+    "name": "English",
+    "region": "US",
+    "keyboardScheme": "QWERTY",
+    "latin": false,
+    "locale": {
+        "title": {
+            "intro": [ "present", "in association", "with" ],
+            "enter": "Press Enter to Begin"
+        },
+        "difficulties": ["easy", "normal", "hard"],
+        "story": {
+            "wScore": "WEEK SCORE",
+            "tracks": "TRACKS"
+        },
+        "freeplay": {
+            "pBest": "PERSONAL BEST",
+            "accuracy": "ACCURACY",
+            "rating": "RATING",
+
+            "extraData": "for extra data",
+            "songPreview": "to listen to the instrumental",
+            "mods": "to change the modifiers"
+        },
+        "credits": [
+            "",
+            "Main programmer.",
+            "MP4 support.",
+            "Main artist.",
+            "Drew indigo's icon, as well as her own.",
+            "",
+            "Main programmer.",
+            "Main animator.",
+            "Main artist.",
+            "Main composer."
+        ],
+        "options": {
+            "ahah": "yeah, sure"
+        },
+
+        "gameplay": {
+            "ratings": [
+                ["Marvelous", "Marvelous"],
+                ["Sick", "Sick"],
+                ["Good", "Good"],
+                ["Bad", "Bad"],
+                ["Shit", "Boo"],
+                ["Misses", "Misses"]
+            ],
+            "accuracy": "Accuracy",
+            "score": "Score",
+            "rating": "Rating",
+
+            "unrated": "unrated"
+        },
+        "pause": {
+            "resume": "resume",
+            "restart_song": "restart song",
+            "botplay": "botplay",
+            "options": "options",
+            "exit_to_menu": "exit to menu"
+        }
+    }
+}

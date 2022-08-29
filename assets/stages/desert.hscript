@@ -1,0 +1,151 @@
+var towerMan;
+var movingTank;
+
+function createStage() {
+    var alias = !Save.get("antialiasing");
+
+    var bg1 = new FlxSprite(-305,-400).loadGraphic(Paths.image('tankSky'));
+    bg1.antialiasing = !alias;
+    bg1.scrollFactor.set();
+
+    var bg2 = new FlxSprite(-303,-27).loadGraphic(Paths.image('tankClouds'));
+    bg2.antialiasing = !alias;
+    bg2.scrollFactor.set(0.3,0.3);
+
+    var bg3 = new FlxSprite(-50,-5).loadGraphic(Paths.image('tankMountains'));
+    bg3.antialiasing = !alias;
+    bg3.scale.set(1.35,1.35);
+    bg3.scrollFactor.set(0.3,0.3);
+
+    var bg4 = new FlxSprite(-170,-55).loadGraphic(Paths.image('tankBuildings'));
+    bg4.antialiasing = !alias;
+    bg4.scrollFactor.set(0.4,0.4);
+
+    var bg5 = new FlxSprite(-155,-53).loadGraphic(Paths.image('tankRuins'));
+    bg5.antialiasing = !alias;
+    bg5.scrollFactor.set(0.5,0.5);
+
+    var bg6 = new FlxSprite(-280,-255).loadGraphic(Paths.image('tankGround'));
+    bg6.antialiasing = !alias;
+    bg6.scale.set(1.2,1.2);
+    bg6.scrollFactor.set(1,1);
+
+    var smokeLeft = new FlxSprite(-300, -200);
+    smokeLeft.antialiasing = !alias;
+    smokeLeft.scrollFactor.set(0.45, 0.45);
+    smokeLeft.frames = Paths.getSparrowAtlas('smokeLeft');
+    smokeLeft.animation.addByPrefix('boop', 'SmokeBlurLeft instance 1', 24, true);
+    smokeLeft.animation.play('boop', true);
+
+    var smokeRight = new FlxSprite(1000, -300);
+    smokeRight.antialiasing = !alias;
+    smokeRight.scrollFactor.set(0.45, 0.45);
+    smokeRight.frames = Paths.getSparrowAtlas('smokeRight');
+    smokeRight.animation.addByPrefix('boop', 'SmokeRight instance 1', 24, true);
+    smokeRight.animation.play('boop', true);
+
+    towerMan = new FlxSprite(-100, -40);
+    towerMan.antialiasing = !alias;
+    towerMan.frames = Paths.getSparrowAtlas('tankWatchtower');
+    towerMan.animation.addByPrefix('boop', 'watchtower gradient color instance 1', 24, false);
+
+    movingTank = new FlxSprite();
+    movingTank.antialiasing = !alias;
+    movingTank.frames = Paths.getSparrowAtlas('tankRolling');
+    movingTank.animation.addByPrefix('boop', 'BG tank w lighting instance', 22, true);
+    movingTank.animation.play('boop', true);
+
+    for (i in 1...7) {
+        var man = new FlxSprite();
+        man.antialiasing = !alias;
+        man.scrollFactor.set(1.2,1.2);
+        man.frames = Paths.getSparrowAtlas('tank' + (i - 1));
+        var x = 0;
+        var y = 0;
+
+        var man1;
+        if (i != 1)
+            man1 = Super.get("tankMan1");
+        switch (i) {
+            case 1: x = bg6.x - 130; y = 410;
+            case 2: x = man1.x + 350; y = man1.y + 345;
+            case 3: x = man1.x + 830; y = man1.y + 225;
+            case 4: x = man1.x + 1140; y = man1.y + 330;
+            case 5: x = man1.x + 1685; y = man1.y + 290;
+            case 6: x = man1.x + 1940; y = man1.y + 40;
+        }
+        man.animation.addByPrefix('boop', "f", 24, false);
+        man.setPosition(x, y);
+
+        Super.set("tankMan" + i, man);
+    }
+
+    Parent.add(bg1);
+    Parent.add(bg2);
+    Parent.add(bg3);
+    Parent.add(bg4);
+    Parent.add(bg5);
+
+    Parent.add(smokeLeft);
+    Parent.add(smokeRight);
+
+    Parent.add(towerMan);
+    Parent.add(movingTank);
+
+    Parent.add(bg6);
+}
+
+function createPost() {
+    Parent.add(tankMan1);
+    Parent.add(tankMan2);
+    Parent.add(tankMan3);
+    Parent.add(tankMan5);
+    Parent.add(tankMan4);
+    Parent.add(tankMan6);
+
+    Parent.defaultCamZoom = 0.85;
+    Parent.camGame.zoom = Parent.defaultCamZoom;
+
+    Parent.boyfriend.cameraX -= 100;
+
+    Parent.dad.x -= 100;
+    Parent.dad.y = 260;
+    Parent.boyfriend.x = Parent.dad.x + 900;
+    Parent.boyfriend.y = 340;
+    Parent.gf.x = Parent.dad.x + 190;
+    Parent.gf.y = 20;
+    if (PlayState.SONG.song.toLowerCase() == 'stress') {
+        Parent.boyfriend.cameraY -= 80;
+        Parent.gf.y -= 120;
+        Parent.gf.x -= 340;
+        Parent.boyfriend.y -= 30;
+    }
+}
+
+function beatHit(beat) {
+    towerMan.animation.play('boop', true);
+    for (i in 1...7) {
+        Super.get("tankMan" + i).animation.play('boop', true);
+    }
+}
+
+var point = {x: 0, y: 0};
+
+function update(dt) {
+    var time = ((Conductor.songPosition * 0.001) - 16) * (bpm / 60);
+
+    var tankSpeed = 0.05;
+    var radiusX = 2000;
+    var radiusY = 700;
+    var pivotX = 410;
+    var pivotY = 820;
+    movingTank.x = Math.cos(time * tankSpeed) * radiusX + pivotX;
+    movingTank.y = Math.sin(time * tankSpeed) * radiusY + pivotY;
+    point.x = Math.cos((time + 1) * tankSpeed) * radiusX + pivotX;
+    point.y = Math.sin((time + 2) * tankSpeed) * radiusY + pivotY;
+    movingTank.angle = pointTo(movingTank, point) + 185;
+}
+
+function pointTo(obj1, obj2):Float {
+    return 180 * Math.atan2(obj1.y - obj2.y, obj1.x - obj2.x) / Math.PI;
+}

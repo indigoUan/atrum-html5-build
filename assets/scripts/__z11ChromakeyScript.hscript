@@ -1,0 +1,37 @@
+importClass("MusicBeatState");
+
+var events = [
+    126 => "static",
+    127 => "reset static",
+    238 => "static",
+    239 => "reset static",
+    240 => "static",
+    241 => "reset static",
+    242 => "static",
+    243 => "reset static",
+    244 => "static",
+    245 => "reset static",
+    278 => "static",
+    279 => "reset static",
+    292 => "static",
+    293 => "reset static"
+];
+
+function beatHit(b) {
+    if (events.exists(b)) {
+        print("event @ " + b + ": " + events[b]);
+        switch (events[b]) {
+            case "static":
+                FlxG.camera.alpha = 0.2;
+            case "reset static":
+                FlxG.camera.alpha = 1;
+        }
+    }
+}
+
+function create() {
+    if (stateName == "PlayState") {
+        MusicBeatState.perennialScript = null;
+        Parent.reloadScript();
+    }
+}

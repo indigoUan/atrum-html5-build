@@ -1,0 +1,13 @@
+function loadedNotes() {
+    for (i in Game.unspawnNotes) {
+        if (i.noteType == "fire") {
+            i.playerHit = false;
+            i.missOnHit = true;
+        }
+    }
+}
+
+function onMiss(note) {
+    if (note.noteType == "fire")
+        Game.health -= 1/3;
+}

@@ -1,0 +1,15 @@
+function act(tab, option, value) {
+    switch (tab.toLowerCase()) {
+        case "miscellaneous": {
+            switch (option.toLowerCase()) {
+                case "framerate": {
+                    FlxG.updateFramerate = value;
+                    FlxG.drawFramerate = value;
+                }
+                case "fps counter": {
+                    Main.fpsCounter.visible = value;
+                }
+            }
+        }
+    }
+}

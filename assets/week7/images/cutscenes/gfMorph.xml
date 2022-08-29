@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gfMorph.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GF Time to Die sequence0000" x="4" y="4" width="903" height="655" frameX="-229" frameY="-456" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0001" x="4" y="4" width="903" height="655" frameX="-229" frameY="-456" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0002" x="911" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0003" x="911" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0004" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0005" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0006" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0007" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0008" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0009" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0010" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0011" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0012" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0013" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0014" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0015" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0016" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0017" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0018" x="2731" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0019" x="2731" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0020" x="4" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0021" x="4" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0022" x="914" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0023" x="914" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0024" x="914" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0025" x="914" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0026" x="914" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0027" x="914" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0028" x="914" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0029" x="1824" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0030" x="1824" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0031" x="2734" y="663" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0032" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0033" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0034" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0035" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0036" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0037" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0038" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0039" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0040" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0041" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0042" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0043" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0044" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0045" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0046" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0047" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0048" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0049" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0050" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0051" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0052" x="1821" y="4" width="906" height="649" frameX="-227" frameY="-462" frameWidth="1133" frameHeight="1111"/>
+	<SubTexture name="GF Time to Die sequence0053" x="4" y="1316" width="1133" height="1111"/>
+	<SubTexture name="GF Time to Die sequence0054" x="1141" y="1316" width="906" height="1008" frameX="-227" frameY="-103" frameWidth="1133" frameHeight="1111"/>
+</TextureAtlas>

@@ -1,0 +1,99 @@
+var done = false;
+var zoomin = true;
+
+var gf;
+var john;
+
+function startCountdown() {
+    Game.allowCountdown = done;
+    if (!done)
+        init();
+}
+
+function update(dt) {
+    if (FlxG.keys.justPressed.F5)
+        finishCutscene();
+    if (zoomin)
+        Game.camGame.zoom = FlxMath.lerp(Game.camGame.zoom, Game.defaultCamZoom, dt * 4);
+    if (done && zoomin)
+        FlxG.sound.music.volume -= dt;
+}
+
+function init() {
+    Game.dad.alpha = 0.0001;
+    Game.gf.alpha = 0.0001;
+
+    var alias = !Save.get("antialiasing");
+
+    john = new FlxSprite(0, 177);
+    john.frames = atlas("guns");
+    john.antialiasing = !alias;
+    john.animation.addByPrefix("waiting", "T", 0);
+    john.animation.addByPrefix("part1", "T", 24, false);
+    john.animation.play("waiting");
+
+    gf = new FlxSprite(190, 20);
+    gf.antialiasing = !alias;
+    gf.frames = Paths.getSparrowAtlas('characters/gfTankman','preload');
+    gf.animation.addByIndices('waiting', 'GF Dancing at Gunpoint', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+    gf.animation.addByIndices('sad', 'GF Crying at Gunpoint', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, true);
+    gf.animation.play("waiting", true);
+
+    FlxG.sound.play(Paths.sound("tankSong2"), 0);
+    FlxG.sound.play(Paths.music("DISTORTO"), 0);
+
+    Game.insert(Game.members.indexOf(Game.gf), gf);
+    Game.insert(Game.members.indexOf(Game.dad), john);
+
+    new FlxTimer().start(1, function(tmr) {
+        startCutscene();
+    });
+}
+var ogZoom = 1;
+
+function startCutscene() {
+    toTank();
+    FlxG.sound.playMusic(Paths.music("DISTORTO"));
+
+    ogZoom = Game.defaultCamZoom;
+    Game.defaultCamZoom = 1;
+
+    john.alpha = 1;
+    john.animation.play("part1", true);
+
+    FlxG.sound.play(Paths.sound("tankSong2"));
+
+    new FlxTimer().start(11, function(tmr) {
+        finishCutscene();
+    });
+    new FlxTimer().start(99 / 24, function(tmr) {
+        Game.camGame.zoom = 1.06;
+        gf.animation.play("sad", true);
+        gf.y += 17;
+    });
+}
+
+function finishCutscene() {
+    done = true;
+    Game.startCountdown();
+    Game.dad.alpha = 1;
+    Game.gf.alpha = 1;
+    Game.remove(gf);
+    Game.remove(john);
+    Game.defaultCamZoom = ogZoom;
+    setTimer("camZoomReset", new FlxTimer().start((Conductor.crochet / 1000) * 5, function() {
+        zoomin = false;
+    }));
+}
+
+function atlas(name) {
+    return Paths.getSparrowAtlas("cutscenes/" + name, "week7");
+}
+
+function toBf() {
+    Game.camFollow.lerpTo(Game.boyfriend.getMidpoint().x + Game.boyfriend.cameraX, Game.boyfriend.getMidpoint().y + Game.boyfriend.cameraY);
+}
+
+function toTank() {
+    Game.camFollow.lerpTo(Game.dad.getMidpoint().x + Game.dad.cameraX, Game.dad.getMidpoint().y + Game.dad.cameraY);
+}

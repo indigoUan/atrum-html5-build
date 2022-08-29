@@ -1,0 +1,14 @@
+function loadedNotes() {
+    for (i in Game.unspawnNotes) {
+        if (i.noteType == "ugh") {
+            i.playAnimation = false;
+        }
+    }
+}
+
+function onOpponentHit(note) {
+    if (note.noteType == "ugh") {
+        Game.dad.holdTimer = 0;
+        Game.dad.playAnim("ugh");
+    }
+}

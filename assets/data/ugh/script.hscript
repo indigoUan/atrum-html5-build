@@ -1,0 +1,35 @@
+importClass("flixel.tweens.FlxEase");
+
+function stepHit(?b) {
+    switch (b) {
+        case 120:
+            Game.camGame.zoom = 1.025;
+        case 122:
+            Game.camGame.zoom = 1.05;
+            Game.camHUD.zoom = 1.025;
+            Game.camNotes.zoom = 1.01;
+        case 124:
+            Game.camGame.zoom = 1.075;
+            Game.camHUD.zoom = 1.05;
+            Game.camNotes.zoom = 1.02;
+        case 126:
+            Game.camGame.zoom = 1.1;
+            Game.camHUD.zoom = 1.075;
+            Game.camNotes.zoom = 1.03;
+        case 128:
+            Game.camGame.zoom = 1.4;
+            Game.camHUD.zoom = 1.1;
+            Game.camNotes.zoom = 1.06;
+    }
+}
+
+function beatHit(?b) {
+    switch (b) {
+        case 152:
+            setTween("picoAhhIn", FlxTween.tween(Game, {defaultCamZoom: 1.4}, (60 / bpm) * 8, {ease: FlxEase.smootherStepInOut, onComplete: function(?_) {
+                    Game.defaultCamZoom = 0.85;
+                    Game.camGame.zoom = 2;
+                }
+            }));
+    }
+}

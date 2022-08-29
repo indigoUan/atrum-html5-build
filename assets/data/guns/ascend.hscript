@@ -1,0 +1,9 @@
+function update(dt) {
+    var speed = 30;
+    if ((curBeat >= 224 && curBeat <= 255) || (curBeat >= 288 && curBeat <= 319) || (curBeat >= 352 && curBeat <= 383)) {
+        Game.dad.y -= dt * speed;
+    }
+    if ((curBeat >= 256 && curBeat <= 287) || (curBeat >= 320 && curBeat <= 351) || (curBeat >= 384 && curBeat <= 415)) {
+        Game.boyfriend.y -= dt * speed;
+    }
+}
