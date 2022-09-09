@@ -1,8 +1,0 @@
-function make(object, variable, value, duration, ease) {
-    var dyn = {};
-    Reflect.setField(dyn, variable, value);
-    return FlxTween.tween(object, dyn, duration, {ease: CoolUtil.easeFromName(ease)});
-}
-function tween(tag, object, variable, value, duration, ease) {
-    setTween(tag, make(object, variable, value, duration, ease));
-}

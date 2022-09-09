@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="checkbox.png">
-    <SubTexture name="checkbox0000" x="0" y="0" width="396" height="413" frameX="-25" frameY="-23" frameWidth="448" frameHeight="448" />
-    <SubTexture name="checkbox0001" x="1209" y="0" width="417" height="404" frameX="-3" frameY="-30" frameWidth="448" frameHeight="448" />
-    <SubTexture name="checkbox0002" x="798" y="0" width="411" height="410" frameX="-21" frameY="-26" frameWidth="448" frameHeight="448" />
-    <SubTexture name="checkbox0003" x="396" y="0" width="402" height="412" frameX="-38" frameY="-26" frameWidth="448" frameHeight="448" />
-    <SubTexture name="checkbox0004" x="392" y="413" width="419" height="408" frameX="-25" frameY="-27" frameWidth="448" frameHeight="448" />
-    <SubTexture name="checkbox0005" x="0" y="413" width="392" height="409" frameX="-26" frameY="-25" frameWidth="448" frameHeight="448" />
-</TextureAtlas>
