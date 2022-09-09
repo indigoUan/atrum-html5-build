@@ -1,0 +1,10 @@
+importClass("Shaders.InvertShader");
+
+function loadedNotes() {
+    for (i in Game.unspawnNotes) {
+        if (i.noteType == "lift") {
+            i.hitOnLift = true;
+            i.shader = new InvertShader();
+        }
+    }
+}

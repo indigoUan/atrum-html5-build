@@ -1,0 +1,69 @@
+{
+    "name": "Italiano",
+    "region": "EU",
+    "keyboardScheme": "QWERTY",
+    "latin": true,
+    "locale": {
+        "title": {
+            "html5warning": {
+                "windows": "Sembra che tu stia giocando su un dispositivo Windows.\nNota bene che questo gioco ha molte più feature nella versione scaricabile.",
+                "non_win": "Nota bene che questo gioco ha molte più feature nella versione scaricabile Windows.\nSuggeriamo di scaricarla su un dispositivo Windows."
+            },
+            "intro": [ "presentano", "in associazione", "con" ],
+            "enter": "Premi Invio per Iniziare"
+        },
+        "difficulties": ["facile", "normale", "difficile"],
+        "story": {
+            "wScore": "PUNTEGGIO SETTIMANA",
+            "tracks": "TRACCE"
+        },
+        "freeplay": {
+            "pBest": "HIGHSCORE",
+            "accuracy": "PRECISIONE",
+            "rating": "VOTO",
+
+            "extraData": "per dati extra",
+            "songPreview": "per ascoltare la strumantale",
+            "mods": "per cambiare i modificatori"
+        },
+        "credits": [
+            "",
+            "Programmatore principale.",
+            "Supporto MP4 su C++.",
+            "Artista principale.",
+            "Disegnato l'icona di indigo, e la sua.",
+            "",
+            "",
+            "Programmatore principale.",
+            "Animatore principale.",
+            "Artista principale.",
+            "Compositore principale."
+        ],
+        "options": {
+            "keybinder": "Premi un pulsante"
+        },
+
+        "gameplay": {
+            "ratings": [
+                ["Meraviglioso", "Meraviglioso"],
+                ["Figo", "Figo"],
+                ["Buono", "Buono"],
+                ["Male", "Male"],
+                ["Merda", "Buu"],
+                ["Mancati", "Mancati"]
+            ],
+            "accuracy": "Precisione",
+            "score": "Punti",
+            "rating": "Voto",
+
+            "unrated": "non valutato"
+        },
+        "pause": {
+            "resume": "riprendi",
+            "restart_song": "riavvia brano",
+            "botplay": "botplay",
+            "options": "opzioni",
+            "exit_to_menu": "ritorna al menu"
+        }
+    }
+}

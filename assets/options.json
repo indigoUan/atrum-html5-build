@@ -1,0 +1,69 @@
+{
+    "tabs": [ "Miscellaneous", "Appearance", "Gameplay", "Filters" ],
+
+    "options": [
+        ["Framerate", "Rate at which the screen updates the image.", "Miscellaneous", 60],
+["V-Sync", "Reduces screen tearing.", "nil Miscellaneous", true],
+        ["Gore", "Allows blood and organs to be displayed.", "Miscellaneous", true],
+        ["FPS counter", "Shows the FPS counter in the top left corner.", "Miscellaneous", false],
+        ["Verbose Ratings", "Shows the combo ratings as full sentences instead of acronyms.", "Miscellaneous", false],
+        ["Notes Spawn Offset", "How far off the notes are allowed to spawn (noticeable in some modcharts).", "Miscellaneous", 720],
+
+        ["Flashing Lights", "Toggle off if you are sensible to flashing lights.", "Appearance", true],
+        ["Antialiasing", "Smooth out graphics (ignores pixel stages).", "Appearance", true],
+        ["Cascadia Font", "Override the VCR font with the Cascadia one.", "Appearance", true],
+        ["Strum Notes Scale", "Multiplier of the size of the strum notes.", "Appearance", 100],
+        ["Noteskin", "Texture style of notes and strums.", "Appearance", "Arrows"],
+["Note Color by Quantization", "Colors the notes based around their quantization instead of direction.", "nil Appearance", false],
+
+        ["Downscroll", "The notes scroll downwards instead of upwards.", "Gameplay", false],
+        ["Center Lanes", "The notes scroll in the center, rather than on the right.", "Gameplay", false],
+        ["Ghost Tapping", "Doesn't cause a miss if you press when there is no note.", "Gameplay", true],
+
+        ["Deuteranopia filter", "Activate deuteranopia color filter.", "Filters", false],
+        ["Protanopia filter", "Activate protanopia color filter.", "Filters", false],
+        ["Tritanopia filter", "Activate tritanopia color filter.", "Filters", false],
+        ["Grayscale filter", "Activate greyscale color filter.", "Filters", false],
+        ["Sepia filter", "Activate sepia color filter.", "Filters", false],
+        ["Inverse filter", "Activate inverse color filter.", "Filters", false]
+    ],
+
+    "remove_from_html5": [
+        "framerate",
+        "v-sync",
+        "grayscale filter",
+        "sepia filter",
+        "inverse filter"
+    ],
+
+    "meta": [
+        {
+            "option": "framerate",
+            "min": 30,
+            "max": 360,
+            "mod": 10,
+            "mult": 3,
+            "measure": ""
+        },
+        {
+            "option": "strum notes scale",
+            "min": 20,
+            "max": 150,
+            "mod": 5,
+            "mult": 2,
+            "measure": "%"
+        },
+        {
+            "option": "notes spawn offset",
+            "min": 120,
+            "max": 2880,
+            "mod": 10,
+            "mult": 10,
+            "measure": "px"
+        },
+        {
+            "option": "noteskin",
+            "options": ["Arrows", "Squares"]
+        }
+    ]
+}

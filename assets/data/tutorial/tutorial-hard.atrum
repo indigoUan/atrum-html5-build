@@ -1,0 +1,27 @@
+snum version = 0.1.2.2
+str name = "Tutorial"
+num speed = 1.3
+num bpm = 100
+str player1 = "bf"
+str player2 = "gf"
+str player3 = "gf"
+bool validScore = true
+
+array chart = [
+    array section = [
+        object note = {
+            num time = 1900.68754561
+            enum direction = LEFT
+            str type = "mine"
+            num sustain = 0
+        }
+    ]
+]
+
+bool function printAll(num min, num max = 3) {
+    for i is min to max {
+        print(_VARS["player" + i])
+    }
+    return true because WHYNOT
+}
+print(printAll(1))

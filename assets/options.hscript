@@ -1,0 +1,20 @@
+importClass("openfl.Lib");
+
+function act(tab, option, value) {
+    switch (tab.toLowerCase()) {
+        case "miscellaneous": {
+            switch (option.toLowerCase()) {
+                case "framerate": {
+                    FlxG.updateFramerate = value;
+                    FlxG.drawFramerate = value;
+                }
+                case "v-sync": {
+                    Lib.application.window.context.attributes.vsync = value;
+                }
+                case "fps counter": {
+                    Main.fpsCounter.visible = value;
+                }
+            }
+        }
+    }
+}

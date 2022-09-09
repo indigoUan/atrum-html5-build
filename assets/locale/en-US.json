@@ -1,0 +1,69 @@
+{
+    "name": "English",
+    "region": "US",
+    "keyboardScheme": "QWERTY",
+    "latin": false,
+    "locale": {
+        "title": {
+            "html5warning": {
+                "windows": "It seems as if you are playing on a Windows machine.\nPlease note that this game has got plenty more features in the downloadable version.",
+                "non_win": "Please note that this game has got plenty more features in the windows downloadable version.\nWe recomend you download it on a Windows machine."
+            },
+            "intro": [ "present", "in association", "with" ],
+            "enter": "Press Enter to Begin"
+        },
+        "difficulties": ["easy", "normal", "hard"],
+        "story": {
+            "wScore": "WEEK SCORE",
+            "tracks": "TRACKS"
+        },
+        "freeplay": {
+            "pBest": "PERSONAL BEST",
+            "accuracy": "ACCURACY",
+            "rating": "RATING",
+
+            "extraData": "for extra data",
+            "songPreview": "to listen to the instrumental",
+            "mods": "to change the modifiers"
+        },
+        "credits": [
+            "",
+            "Main programmer.",
+            "C++ MP4 support.",
+            "Main artist.",
+            "Drew indigo's icon, as well as her own.",
+            "",
+            "",
+            "Main programmer.",
+            "Main animator.",
+            "Main artist.",
+            "Main composer."
+        ],
+        "options": {
+            "keybinder": "Press a key"
+        },
+
+        "gameplay": {
+            "ratings": [
+                ["Marvelous", "Marvelous"],
+                ["Sick", "Sick"],
+                ["Good", "Good"],
+                ["Bad", "Bad"],
+                ["Shit", "Boo"],
+                ["Misses", "Misses"]
+            ],
+            "accuracy": "Accuracy",
+            "score": "Score",
+            "rating": "Rating",
+
+            "unrated": "unrated"
+        },
+        "pause": {
+            "resume": "resume",
+            "restart_song": "restart song",
+            "botplay": "botplay",
+            "options": "options",
+            "exit_to_menu": "exit to menu"
+        }
+    }
+}
